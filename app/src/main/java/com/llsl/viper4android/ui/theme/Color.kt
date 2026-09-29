@@ -70,3 +70,23 @@ val md_alert_tip = Color(0xFF57AB5A)
 val md_alert_important = Color(0xFF986EE2)
 val md_alert_warning = Color(0xFFC69026)
 val md_alert_caution = Color(0xFFE5534B)
+
+// Oxydian palette (matches the companion app's default DST Accento/Preset Sfondo, #908DFF /
+// #1B2029) — these are static so Substratum-style overlays can target them, unlike the
+// dynamic Material You colors used elsewhere in this theme.
+val oxydian_accent = Color(0xFF908DFF)
+val oxydian_background = Color(0xFF1B2029)
+// Same brightening ramp Oxydian's own ObsidianTheme.bgDerivedPresets() computes over its
+// background, so elevated surfaces here step up in lightness the same way Oxydian's own
+// cards do instead of using Material You's dynamic surfaceContainer tones.
+val oxydian_surface_1 = Color(0xFF22262F)
+val oxydian_surface_2 = Color(0xFF242832)
+val oxydian_surface_3 = Color(0xFF282C36)
+val oxydian_surface_4 = Color(0xFF2C313A)
+val oxydian_surface_5 = Color(0xFF30353F)
+val oxydian_surface_6 = Color(0xFF353944)
+val oxydian_surface_7 = Color(0xFF393E48)
+val oxydian_surface_8 = Color(0xFF3E424D)
+// Oxydian's ObsidianTheme.cardColor() — background HSV value +5%, the exact tone it uses
+// for a single elevated row/header against the background above.
+val oxydian_header = Color(0xFF232A36)

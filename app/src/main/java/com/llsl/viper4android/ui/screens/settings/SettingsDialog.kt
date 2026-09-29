@@ -31,6 +31,7 @@ import com.llsl.viper4android.ui.components.NavRow
 import com.llsl.viper4android.ui.components.RowDivider
 import com.llsl.viper4android.ui.components.ToggleRow
 import com.llsl.viper4android.ui.screens.main.DriverStatus
+import com.llsl.viper4android.ui.theme.oxydian_background
 import com.llsl.viper4android.ui.theme.status_active_green
 
 @Composable
@@ -60,6 +61,7 @@ fun SettingsDialog(
         modifier = Modifier.fillMaxWidth(0.9f),
         properties = DialogProperties(usePlatformDefaultWidth = false),
         onDismissRequest = onDismiss,
+        containerColor = oxydian_background,
         title = {
             Row(
                 modifier = Modifier.fillMaxWidth(),

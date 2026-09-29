@@ -7,7 +7,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -43,9 +42,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
@@ -61,10 +62,8 @@ import com.llsl.viper4android.ui.screens.settings.ExcludedAppsDialog
 import com.llsl.viper4android.ui.screens.settings.SettingsDialog
 import com.llsl.viper4android.ui.screens.settings.UpdateDialog
 import com.llsl.viper4android.ui.screens.status.DriverStatusDialog
-import com.llsl.viper4android.ui.theme.master_on_container_dark
-import com.llsl.viper4android.ui.theme.master_on_container_light
-import com.llsl.viper4android.ui.theme.master_on_onContainer_dark
-import com.llsl.viper4android.ui.theme.master_on_onContainer_light
+import com.llsl.viper4android.ui.theme.oxydian_accent
+import com.llsl.viper4android.ui.theme.oxydian_background
 import com.llsl.viper4android.ui.theme.status_active_green
 import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.milliseconds
@@ -283,7 +282,12 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
             TopAppBar(
                 title = {
                     Column {
-                        Text(stringResource(R.string.app_name))
+                        Text(
+                            text = stringResource(R.string.app_name),
+                            style = MaterialTheme.typography.titleMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
                         val deviceName = state.activeDeviceName
                         if (deviceName.isNotEmpty()) {
                             val dotColor =
@@ -300,7 +304,9 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
                                 Text(
                                     text = deviceName,
                                     style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                    color = Color.White,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
                                 )
                             }
                         }
@@ -308,9 +314,9 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
                 },
                 colors =
                     TopAppBarDefaults.topAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer,
-                        titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                        actionIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                        containerColor = oxydian_background,
+                        titleContentColor = Color.White,
+                        actionIconContentColor = Color.White,
                     ),
                 actions = {
                     if (debugMode) {
@@ -350,24 +356,15 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
         },
         floatingActionButton = {
             val masterOn = state.masterEnable
-            val darkTheme = isSystemInDarkTheme()
+            // Accento when active, Accento Alpha (~30%, same dim ratio as Oxydian's own
+            // ObsidianTheme.accentDim()) when off — icon stays white either way.
             val containerColor =
-                when {
-                    !masterOn -> MaterialTheme.colorScheme.errorContainer
-                    darkTheme -> master_on_container_dark
-                    else -> master_on_container_light
-                }
-            val onContainerColor =
-                when {
-                    !masterOn -> MaterialTheme.colorScheme.onErrorContainer
-                    darkTheme -> master_on_onContainer_dark
-                    else -> master_on_onContainer_light
-                }
+                if (masterOn) oxydian_accent else oxydian_accent.copy(alpha = 0.3f)
             FloatingActionButton(
                 onClick = { viewModel.setMasterEnabled(!masterOn) },
                 shape = MaterialTheme.shapes.large,
                 containerColor = containerColor,
-                contentColor = onContainerColor,
+                contentColor = Color.White,
             ) {
                 Icon(
                     imageVector = Icons.Default.PowerSettingsNew,

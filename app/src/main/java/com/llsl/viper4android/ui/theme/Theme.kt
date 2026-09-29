@@ -3,11 +3,14 @@ package com.llsl.viper4android.ui.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SwitchColors
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val LightColorScheme =
@@ -72,7 +75,7 @@ fun ViperTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit,
 ) {
-    val colorScheme =
+    val baseScheme =
         when {
             dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
                 val context = LocalContext.current
@@ -88,8 +91,41 @@ fun ViperTheme(
             }
         }
 
+    // Background/surface family pinned to Oxydian's own Preset Sfondo palette (static, so
+    // it stays consistent with the companion app regardless of the device wallpaper) —
+    // accent-driven tokens (primary/secondary/etc.) are left as-is.
+    val colorScheme =
+        if (darkTheme) {
+            baseScheme.copy(
+                background = oxydian_background,
+                surface = oxydian_background,
+                surfaceContainerLowest = oxydian_surface_1,
+                surfaceContainerLow = oxydian_surface_3,
+                surfaceContainer = oxydian_surface_5,
+                surfaceContainerHigh = oxydian_surface_7,
+                surfaceContainerHighest = oxydian_surface_8,
+            )
+        } else {
+            baseScheme
+        }
+
     MaterialTheme(
         colorScheme = colorScheme,
         content = content,
     )
 }
+
+/** Shared Switch colors matching Oxydian's own toggle style: accent track + white thumb when
+ *  on, accent border/thumb over a Preset-Sfondo track when off. */
+@Composable
+fun oxydianSwitchColors(): SwitchColors =
+    SwitchDefaults.colors(
+        checkedThumbColor = Color.White,
+        checkedTrackColor = oxydian_accent,
+        checkedBorderColor = oxydian_accent,
+        checkedIconColor = Color.Transparent,
+        uncheckedThumbColor = oxydian_accent,
+        uncheckedTrackColor = Color.Transparent,
+        uncheckedBorderColor = oxydian_accent,
+        uncheckedIconColor = Color.Transparent,
+    )

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ViPER4Android</string>
+    <string name="notification_channel_name">Elaborazione Audio</string>
+    <string name="notification_channel_description">Mostrata quando ViPER4Android sta elaborando l\'audio</string>
+    <string name="notification_title">ViPER4Android</string>
+    <string name="notification_text">Elaborazione audio attiva</string>
+    <string name="notification_bulk_op_channel_name">Operazioni Multiple</string>
+    <string name="notification_bulk_op_channel_description">Avanzamento delle operazioni multiple</string>
+    <string name="qs_tile_master_label">Master</string>
+
+    <!-- Master -->
+    <string name="master_enable">Attiva Master</string>
+    <string name="menu_driver_status">Stato Driver</string>
+    <string name="menu_presets">Preset</string>
+    <string name="menu_settings">Impostazioni</string>
+    <string name="menu_devices">Dispositivi</string>
+
+    <!-- Common -->
+    <string name="label_max_gain">Guadagno Massimo</string>
+    <string name="label_threshold">Soglia</string>
+    <string name="label_gain">Guadagno</string>
+    <string name="label_attack">Attacco</string>
+    <string name="label_release">Rilascio</string>
+    <string name="label_strength">Intensità</string>
+    <string name="label_frequency">Frequenza</string>
+    <string name="label_width">Ampiezza</string>
+    <string name="label_depth">Profondità</string>
+    <string name="label_delay">Ritardo</string>
+    <string name="label_mode">Modalità</string>
+    <string name="label_off">Off</string>
+    <string name="label_preset">Preset</string>
+    <string name="label_custom">Personalizzato</string>
+    <string name="label_none">Nessuno</string>
+    <string name="label_mild">Leggero</string>
+    <string name="label_medium">Medio</string>
+    <string name="label_strong">Forte</string>
+
+    <!-- Numeric input dialog -->
+    <string name="dialog_value_range">Intervallo: %1$s – %2$s</string>
+    <string name="dialog_value_range_unit">Intervallo: %1$s – %2$s %3$s</string>
+
+    <!-- Output / Master limiter -->
+    <string name="section_master_limiter">Limitatore Master</string>
+    <string name="label_output_volume">Guadagno Uscita</string>
+    <string name="label_output_pan">Bilanciamento Uscita</string>
+    <string name="label_output_limiter">Soglia Limitatore</string>
+
+    <!-- AGC -->
+    <string name="section_agc">Controllo Guadagno Riproduzione</string>
+    <string name="label_agc_output_threshold">Soglia Uscita</string>
+
+    <!-- LUFS Targeting -->
+    <string name="section_lufs_targeting">Target LUFS</string>
+    <string name="label_lufs_target_lufs">LUFS Target</string>
+    <string name="label_lufs_speed">Velocità</string>
+    <string name="label_lufs_speed_slow">Lenta</string>
+    <string name="label_lufs_speed_medium">Media</string>
+    <string name="label_lufs_speed_fast">Veloce</string>
+
+    <!-- FET Compressor -->
+    <string name="section_fet_compressor">Compressore FET</string>
+    <string name="label_fet_ratio">Rapporto</string>
+    <string name="label_fet_knee">Ginocchio</string>
+    <string name="label_fet_auto_knee">Ginocchio Automatico</string>
+    <string name="label_fet_knee_multi">Moltiplicatore Ginocchio</string>
+    <string name="label_fet_auto_gain">Guadagno Automatico</string>
+    <string name="label_fet_auto_attack">Attacco Automatico</string>
+    <string name="label_fet_max_attack">Attacco Massimo</string>
+    <string name="label_fet_auto_release">Rilascio Automatico</string>
+    <string name="label_fet_max_release">Rilascio Massimo</string>
+    <string name="label_fet_crest">Crest</string>
+    <string name="label_fet_adapt">Adatta</string>
+    <string name="label_fet_no_clip">No Clip</string>
+
+    <!-- Multiband Compressor -->
+    <string name="section_multiband_compressor">Compressore Multibanda</string>
+    <string name="label_band_enabled">Banda Attiva</string>
+    <string name="label_upper_crossover">Crossover Superiore</string>
+
+    <!-- DDC -->
+    <string name="section_ddc">ViPER-DDC</string>
+    <string name="label_ddc_device">Correzione Cuffie</string>
+
+    <!-- Spectrum Extension -->
+    <string name="section_spectrum_extension">Estensione Spettro</string>
+    <string name="label_vse_exciter">Exciter</string>
+
+    <!-- Equalizer -->
+    <string name="section_equalizer">Equalizzatore FIR</string>
+    <string name="label_eq_bands">Numero Bande</string>
+    <string name="label_eq_n_bands">%d Bande</string>
+
+    <!-- Dynamic EQ -->
+    <string name="section_dynamic_eq">EQ Dinamico</string>
+    <string name="label_dynamic_eq_q_factor">Fattore Q</string>
+    <string name="label_dynamic_eq_target_gain">Guadagno Target</string>
+    <string name="label_dynamic_eq_filter_type">Tipo Filtro</string>
+    <string name="dialog_delete_band">Elimina Banda</string>
+    <string name="dialog_delete_band_confirm">Rimuovere la banda %1$s?</string>
+
+    <!-- Convolver -->
+    <string name="section_convolver">Convolutore</string>
+    <string name="label_convolver_kernel">File Kernel</string>
+    <string name="label_convolver_cross_channel">Cross-Channel</string>
+
+    <!-- Field Surround -->
+    <string name="section_field_surround">Field Surround</string>
+    <string name="label_field_surround_widening">Intensità Surround</string>
+    <string name="label_field_surround_mid_image">Intensità Immagine Centrale</string>
+
+    <!-- Differential Surround -->
+    <string name="section_diff_surround">Surround Differenziale</string>
+    <string name="label_diff_surround_reverse">Inverti</string>
+    <string name="label_diff_surround_wet_dry_mix">Mix Wet/Dry</string>
+    <string name="label_diff_surround_lp_cutoff">Cutoff LP</string>
+
+    <!-- Stereo Imager -->
+    <string name="section_stereo_imager">Stereo Imager</string>
+    <string name="label_stereo_imager_low_width">Ampiezza Bassi</string>
+    <string name="label_stereo_imager_mid_width">Ampiezza Medi</string>
+    <string name="label_stereo_imager_high_width">Ampiezza Alti</string>
+    <string name="label_stereo_imager_low_crossover">Crossover Bassi</string>
+    <string name="label_stereo_imager_high_crossover">Crossover Alti</string>
+
+    <!-- Headphone Surround -->
+    <string name="section_headphone_surround">Headphone Surround+</string>
+    <string name="label_vhe_quality">Livello Qualità</string>
+
+    <!-- Reverberation -->
+    <string name="section_reverb">Riverbero</string>
+    <string name="label_reverb_room_size">Dimensione Stanza</string>
+    <string name="label_reverb_dampening">Smorzamento</string>
+    <string name="label_reverb_wet">Segnale Wet</string>
+    <string name="label_reverb_dry">Segnale Dry</string>
+
+    <!-- Dynamic System -->
+    <string name="section_dynamic_system">Dynamic System</string>
+    <string name="label_dynamic_system_strength">Intensità Bassi Dinamici</string>
+    <string name="label_dynamic_system_x_low_freq">Freq X Bassa</string>
+    <string name="label_dynamic_system_x_high_freq">Freq X Alta</string>
+    <string name="label_dynamic_system_y_low_freq">Freq Y Bassa</string>
+    <string name="label_dynamic_system_y_high_freq">Freq Y Alta</string>
+    <string name="label_dynamic_system_side_gain_low">Guadagno Laterale Basso</string>
+    <string name="label_dynamic_system_side_gain_high">Guadagno Laterale Alto</string>
+
+    <!-- Tube Simulator -->
+    <string name="section_tube_simulator">Simulatore Valvolare (6N1J)</string>
+
+    <!-- Psychoacoustic Bass -->
+    <string name="section_psycho_bass">Bassi Psicoacustici</string>
+    <string name="label_psycho_bass_cutoff">Cutoff</string>
+    <string name="label_psycho_bass_intensity">Intensità</string>
+    <string name="label_psycho_bass_harmonic_order">Ordine Armonico</string>
+    <string name="label_psycho_bass_ori_bass_level">Livello Bassi Originali</string>
+
+    <!-- ViPER Bass -->
+    <string name="section_viper_bass">ViPER Bass</string>
+    <string name="label_bass_anti_pop">Dissolvenza in Apertura</string>
+
+    <!-- ViPER Bass Mono -->
+    <string name="section_viper_bass_mono">ViPER Bass Mono</string>
+
+    <!-- ViPER Clarity -->
+    <string name="section_viper_clarity">ViPER Clarity</string>
+
+    <!-- Cure -->
+    <string name="section_cure">Protezione Sistema Uditivo</string>
+    <string name="label_cure_strength">Livello Binaurale</string>
+
+    <!-- AnalogX -->
+    <string name="section_analogx">AnalogX</string>
+
+    <!-- Speaker Optimization -->
+    <string name="section_speaker_optimization">Ottimizzazione Altoparlante</string>
+
+    <!-- Filter Type -->
+    <string name="filter_peak">Campana</string>
+    <string name="filter_low_shelf">Shelf Basso</string>
+    <string name="filter_high_shelf">Shelf Alto</string>
+
+    <!-- Harmonic Order -->
+    <string name="harmonic_2nd">2ª</string>
+    <string name="harmonic_3rd">3ª</string>
+    <string name="harmonic_4th">4ª</string>
+    <string name="harmonic_5th">5ª</string>
+
+    <!-- Bass modes -->
+    <string name="bass_mode_natural">Bassi Naturali</string>
+    <string name="bass_mode_pure">Pure Bass+</string>
+    <string name="bass_mode_subwoofer">Subwoofer</string>
+
+    <!-- Clarity modes -->
+    <string name="clarity_mode_natural">Naturale</string>
+    <string name="clarity_mode_ozone">OZone+</string>
+    <string name="clarity_mode_xhifi">XHiFi</string>
+
+    <!-- Presets -->
+    <string name="preset_save_title">Salva Preset</string>
+    <string name="preset_rename_title">Rinomina Preset</string>
+    <string name="preset_name_hint">Nome preset</string>
+    <string name="preset_empty">Nessun preset salvato</string>
+    <string name="preset_save_current">Salva Corrente</string>
+    <string name="preset_clear_all">Cancella Tutti</string>
+    <string name="preset_clear_all_title">Cancella Tutti i Preset</string>
+    <string name="preset_clear_all_confirm">Eliminare tutti i %1$d preset? L\'operazione non può essere annullata.</string>
+    <string name="preset_clear_all_progress">Cancellazione preset in corso</string>
+    <string name="preset_cleared">Cancellati</string>
+    <string name="preset_update_title">Aggiorna Preset</string>
+    <string name="preset_update_confirm">Sovrascrivere "%1$s" con le impostazioni attuali? L\'operazione non può essere annullata.</string>
+    <string name="preset_load_title">Carica Preset</string>
+    <string name="preset_load_confirm">Caricare "%1$s"? Le impostazioni attuali verranno sostituite.</string>
+    <string name="preset_delete_title">Elimina Preset</string>
+    <string name="preset_delete_confirm">Eliminare "%1$s"? L\'operazione non può essere annullata.</string>
+    <string name="preset_tap_for_details">Tocca per i dettagli</string>
+    <string name="preset_label_created">Creato</string>
+    <string name="preset_label_updated">Ultimo Aggiornamento</string>
+
+    <!-- Driver Status -->
+    <string name="driver_not_found">Driver non trovato</string>
+    <string name="driver_version_code">Codice Versione</string>
+    <string name="driver_version_name">Versione</string>
+    <string name="driver_architecture">Architettura</string>
+    <string name="driver_streaming">Streaming</string>
+    <string name="driver_sampling_rate">Frequenza di Campionamento</string>
+    <string name="status_active">Attivo</string>
+    <string name="status_inactive">Inattivo</string>
+    <string name="status_unknown">Sconosciuto</string>
+
+    <!-- Settings -->
+    <string name="settings_general_section">Generale</string>
+    <string name="settings_files_section">File</string>
+    <string name="settings_about_section">Informazioni</string>
+    <string name="settings_auto_start">Avvio automatico al boot</string>
+    <string name="settings_aidl_mode">Modalità AIDL</string>
+    <string name="settings_global_mode">Modalità globale</string>
+    <string name="settings_excluded_apps">App escluse</string>
+    <string name="settings_import_preset">Importa Preset</string>
+    <string name="settings_import_kernel">Importa Kernel</string>
+    <string name="settings_import_vdc">Importa VDC</string>
+    <string name="settings_auto_start_desc">Avvia il servizio audio all\'avvio del dispositivo</string>
+    <string name="settings_global_mode_desc">Applica gli effetti globalmente</string>
+    <string name="settings_excluded_apps_desc">Salta la sessione audio per le app selezionate</string>
+    <string name="settings_import_preset_desc">Carica un file preset .json</string>
+    <string name="settings_import_kernel_desc">Risposta all\'impulso del convolutore</string>
+    <string name="settings_import_vdc_desc">File di calibrazione DDC</string>
+    <string name="settings_driver_version">Versione driver</string>
+    <string name="settings_driver_arch">Architettura driver</string>
+    <string name="settings_app_version">Versione app</string>
+    <string name="import_success">Importato con successo</string>
+    <string name="import_failed">Importazione non riuscita</string>
+
+    <!-- Excluded Apps -->
+    <string name="excluded_apps_title">App Escluse</string>
+    <string name="excluded_apps_search">Cerca app</string>
+    <string name="excluded_apps_loading">Caricamento app…</string>
+    <string name="excluded_apps_show_system">Mostra app di sistema</string>
+
+    <!-- Update -->
+    <string name="update_checking">Controllo aggiornamenti…</string>
+    <string name="update_check_failed">Controllo aggiornamenti non riuscito: %1$s</string>
+    <string name="update_up_to_date_title">Aggiornato</string>
+    <string name="update_available_title">Aggiornamento disponibile</string>
+    <string name="update_new_version">Nuova versione: %1$s</string>
+    <string name="update_latest_version">Ultima versione: %1$s</string>
+    <string name="update_current_version">Attuale: %1$s</string>
+    <string name="update_download_install">Aggiorna</string>
+    <string name="update_view_on_github">Vedi su GitHub</string>
+    <string name="update_downloading">Download in corso… %1$d%%</string>
+    <string name="update_no_apk_asset">Nessun file APK in questa release</string>
+
+    <!-- Devices -->
+    <string name="device_dialog_title">Dispositivi</string>
+    <string name="device_type_bluetooth">Bluetooth</string>
+    <string name="device_type_wired">Cuffie Cablate</string>
+    <string name="device_type_speaker">Altoparlante</string>
+    <string name="device_mode_headphone">Cuffie</string>
+    <string name="device_mode_speaker">Altoparlante</string>
+    <string name="device_label_type">Tipo</string>
+    <string name="device_label_address">Indirizzo</string>
+    <string name="device_label_last_conn">Ultima Connessione</string>
+    <string name="device_no_devices">Nessun dispositivo salvato</string>
+    <string name="device_rename_title">Rinomina Dispositivo</string>
+    <string name="device_update_title">Aggiorna Preset Dispositivo</string>
+    <string name="device_update_confirm">Sovrascrivere il preset di "%1$s" con le impostazioni attuali? L\'operazione non può essere annullata.</string>
+    <string name="device_load_title">Carica Preset Dispositivo</string>
+    <string name="device_load_confirm">Caricare il preset di "%1$s"? Le impostazioni attuali verranno sostituite.</string>
+    <string name="device_delete_title">Elimina Preset Dispositivo</string>
+    <string name="device_delete_confirm">Eliminare il preset salvato per "%1$s"? L\'operazione non può essere annullata.</string>
+
+    <!-- Actions -->
+    <string name="action_save">Salva</string>
+    <string name="action_cancel">Annulla</string>
+    <string name="action_close">Chiudi</string>
+    <string name="action_rename">Rinomina</string>
+    <string name="action_reset">Ripristina</string>
+    <string name="action_load">Carica</string>
+    <string name="action_update">Aggiorna</string>
+    <string name="action_delete">Elimina</string>
+    <string name="action_clear">Cancella</string>
+
+    <!-- Debug -->
+    <string name="debug_log_title">Log di Debug</string>
+    <string name="debug_mode_enabled">Modalità debug attivata</string>
+    <string name="debug_already_enabled">Modalità debug già attiva</string>
+    <string name="debug_search_hint">Filtra log…</string>
+    <string name="debug_disable_debug">Disattiva Debug</string>
+    <string name="debug_export_title">Esporta log</string>
+    <string name="debug_export_confirm">Salvare i log dell\'app e del driver nella memoria esterna?\n\n%1$s\n%2$s</string>
+    <string name="debug_export_action">Esporta</string>
+    <string name="debug_export_done">Log esportati in %1$s</string>
+    <string name="debug_export_failed">Esportazione non riuscita</string>
+
+    <!-- Debug filters -->
+    <string name="debug_filter_all">Tutti</string>
+    <string name="debug_filter_info">Info</string>
+    <string name="debug_filter_debug">Debug</string>
+    <string name="debug_filter_warn">Avviso</string>
+    <string name="debug_filter_error">Errore</string>
+    <string name="debug_filter_app">App</string>
+    <string name="debug_filter_driver">Driver</string>
+    <string name="delete_file_title">Elimina File</string>
+    <string name="delete_file_message">Eliminare "%1$s"?</string>
+
+    <!-- EQ presets -->
+    <string name="eq_preset_acoustic">Acustico</string>
+    <string name="eq_preset_bass_booster">Potenziatore Bassi</string>
+    <string name="eq_preset_bass_reducer">Riduttore Bassi</string>
+    <string name="eq_preset_classical">Classica</string>
+    <string name="eq_preset_deep">Profondo</string>
+    <string name="eq_preset_flat">Piatto</string>
+    <string name="eq_preset_rnb">R&amp;B</string>
+    <string name="eq_preset_rock">Rock</string>
+    <string name="eq_preset_small_speakers">Altoparlanti Piccoli</string>
+    <string name="eq_preset_treble_booster">Potenziatore Acuti</string>
+    <string name="eq_preset_treble_reducer">Riduttore Acuti</string>
+    <string name="eq_preset_vocal_booster">Potenziatore Voce</string>
+
+    <!-- Dynamic System device presets -->
+    <string name="ds_device_extreme_headphone_v2">Cuffie Estreme (v2)</string>
+    <string name="ds_device_high_end_headphone_v2">Cuffie di Fascia Alta (v2)</string>
+    <string name="ds_device_common_headphone_v2">Cuffie Comuni (v2)</string>
+    <string name="ds_device_low_end_headphone_v2">Cuffie di Fascia Bassa (v2)</string>
+    <string name="ds_device_common_earphone_v2">Auricolari Comuni (v2)</string>
+    <string name="ds_device_extreme_headphone_v1">Cuffie Estreme (v1)</string>
+    <string name="ds_device_high_end_headphone_v1">Cuffie di Fascia Alta (v1)</string>
+    <string name="ds_device_common_headphone_v1">Cuffie Comuni (v1)</string>
+    <string name="ds_device_common_earphone_v1">Auricolari Comuni (v1)</string>
+</resources>

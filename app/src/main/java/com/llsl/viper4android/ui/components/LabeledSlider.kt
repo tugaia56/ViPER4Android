@@ -34,6 +34,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.window.Dialog
 import com.llsl.viper4android.R
+import com.llsl.viper4android.ui.theme.oxydian_accent
+import com.llsl.viper4android.ui.theme.oxydian_surface_8
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -100,13 +102,26 @@ fun LabeledSlider(
             colors =
                 if (hideTicks) {
                     SliderDefaults.colors(
+                        thumbColor = oxydian_accent,
+                        activeTrackColor = oxydian_accent,
+                        inactiveTrackColor = oxydian_surface_8,
+                        disabledThumbColor = oxydian_accent,
+                        disabledActiveTrackColor = oxydian_accent,
+                        disabledInactiveTrackColor = oxydian_surface_8,
                         activeTickColor = Color.Transparent,
                         inactiveTickColor = Color.Transparent,
                         disabledActiveTickColor = Color.Transparent,
                         disabledInactiveTickColor = Color.Transparent,
                     )
                 } else {
-                    SliderDefaults.colors()
+                    SliderDefaults.colors(
+                        thumbColor = oxydian_accent,
+                        activeTrackColor = oxydian_accent,
+                        inactiveTrackColor = oxydian_surface_8,
+                        disabledThumbColor = oxydian_accent,
+                        disabledActiveTrackColor = oxydian_accent,
+                        disabledInactiveTrackColor = oxydian_surface_8,
+                    )
                 },
         )
     }

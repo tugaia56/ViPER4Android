@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.llsl.viper4android.ui.theme.oxydianSwitchColors
 
 @Composable
 fun LabeledSwitch(
@@ -45,6 +46,7 @@ fun LabeledSwitch(
             checked = checked,
             onCheckedChange = onCheckedChange,
             enabled = enabled,
+            colors = oxydianSwitchColors(),
         )
     }
 }

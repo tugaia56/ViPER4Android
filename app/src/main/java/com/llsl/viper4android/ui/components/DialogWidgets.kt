@@ -34,6 +34,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import com.llsl.viper4android.ui.theme.oxydianSwitchColors
 
 private val DialogCardCornerRadius = UiDimens.Standard
 private val DialogButtonSpacing = UiDimens.Medium
@@ -197,7 +198,7 @@ fun ToggleRow(
             }
         }
         Spacer(modifier = Modifier.width(DialogRowValueSpacing))
-        Switch(checked = checked, onCheckedChange = onCheckedChange)
+        Switch(checked = checked, onCheckedChange = onCheckedChange, colors = oxydianSwitchColors())
     }
 }
 

@@ -18,7 +18,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.llsl.viper4android.debug"
+        applicationId = "com.llsl.viper4android"
         minSdk = 28
         targetSdk = 37
         versionCode = 1

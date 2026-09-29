@@ -53,6 +53,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.PrimaryScrollableTabRow
 import androidx.compose.material3.PrimaryTabRow
 import androidx.compose.material3.Switch
+import com.llsl.viper4android.ui.theme.oxydianSwitchColors
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -200,6 +201,7 @@ fun EffectSection(
                     Switch(
                         checked = enabled,
                         onCheckedChange = onEnabledChange,
+                        colors = oxydianSwitchColors(),
                     )
                 } else {
                     Spacer(modifier = Modifier.height(EffectSwitchPlaceholderHeight))
